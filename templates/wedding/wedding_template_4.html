@@ -1,0 +1,1676 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Luis & Bianca - Wedding - Madrid</title>
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+
+    <!-- Fonts: Cardo for titles, Josefin Sans for paragraphs -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Josefin+Sans:wght@400;600&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* Modern blue/gold/charcoal palette */
+        --clr-primary: oklch(65% 0.13 250); /* Muted blue */
+        --clr-primary-light: oklch(98% 0.01 60); /* Warm off-white */
+        --clr-accent: oklch(85% 0.08 80); /* Elegant gold/sand */
+        --clr-text-dark: oklch(22% 0.04 250); /* Deep navy/charcoal */
+        --clr-text-light: oklch(98% 0.01 60); /* Off-white for text on dark */
+        --radius-card: 18px;
+        --radius-frame: 22px;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-family: "Josefin Sans", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body {
+        margin: 0;
+        background: linear-gradient(
+          180deg,
+          var(--clr-primary-light) 0%,
+          #f9f7f3 100%
+        );
+        color: var(--clr-text-dark);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      section {
+        position: relative;
+        overflow: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      header {
+        padding: 1.6rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .nav-link {
+        color: var(--clr-text-dark);
+        text-decoration: none;
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .bg-red {
+        background: var(--clr-primary);
+        color: var(--clr-text-light);
+      }
+
+      .bg-beige {
+        background: var(--clr-primary-light);
+        color: var(--clr-text-dark);
+      }
+
+      .texture-overlay {
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(
+          rgba(0, 0, 0, 0.02) 1px,
+          transparent 1px
+        );
+        background-size: 24px 24px;
+        pointer-events: none;
+        opacity: 0.6;
+      }
+
+      .sec-hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--clr-primary);
+        color: var(--clr-text-light);
+        padding: clamp(4rem, 8vw, 6rem);
+        min-height: 100vh;
+      }
+
+      .script-title {
+        font-family: "Cardo", serif;
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: 0.5px;
+      }
+
+      .script-title.xl {
+        font-size: clamp(3rem, 8vw, 5.2rem);
+      }
+      .script-title.lg {
+        font-size: clamp(2.45rem, 6.5vw, 4.2rem);
+      }
+      .script-title.md {
+        font-size: clamp(2rem, 4.7vw, 2.75rem);
+      }
+      .script-title.monogram-text {
+        font-size: clamp(4rem, 9vw, 6rem);
+      }
+
+      .overline {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 0.86rem;
+        margin-bottom: -0.8rem;
+        position: relative;
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: clamp(1rem, 1.65vw, 1.12rem);
+        line-height: 1.75;
+        margin-bottom: 1rem;
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-weight: 400;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .uppercase {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .narrow {
+        max-width: 66ch;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .sec-hero {
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .hero-content h1 {
+        font-size: clamp(3.5rem, 11vw, 8rem);
+        margin-bottom: 2rem;
+        transform: rotate(-2deg);
+      }
+
+      .hero-center-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: clamp(1.4rem, 5vw, 4rem);
+        margin-bottom: 2.2rem;
+      }
+
+      .nav-link {
+        color: var(--clr-text-light);
+        text-decoration: none;
+        letter-spacing: 2px;
+        border-bottom: 1px solid var(--clr-text-light);
+        padding-bottom: 4px;
+        font-size: 0.82rem;
+        transition: opacity 0.3s ease;
+      }
+
+      .nav-link:hover {
+        opacity: 0.75;
+      }
+
+      .nav-link:focus-visible,
+      .faq-trigger:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+      }
+
+      .hero-image-wrapper {
+        background: #fff;
+        padding: 10px 10px 40px 10px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        transform: rotate(2deg);
+        border-radius: 2px;
+      }
+
+      .hero-image-wrapper,
+      .story-note,
+      .story-photo,
+      .itinerary-step,
+      .madrid-card,
+      .madrid-photo,
+      .registry-panel,
+      .faq-item,
+      .rsvp-info,
+      .rsvp-piece,
+      .madrid-photo-wrap,
+      .rsvp-collage-modern {
+        transition:
+          transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1),
+          border-color 260ms cubic-bezier(0.22, 1, 0.36, 1),
+          background-color 260ms cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+      }
+
+      .story-note:hover,
+      .itinerary-step:hover,
+      .madrid-card:hover,
+      .registry-panel:hover,
+      .faq-item:hover,
+      .rsvp-info:hover,
+      .hero-image-wrapper:hover,
+      .madrid-photo-wrap:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 50px rgba(24, 8, 14, 0.16);
+      }
+
+      .polaroid {
+        width: clamp(220px, 33vw, 320px);
+        height: clamp(300px, 44vw, 420px);
+        object-fit: cover;
+        display: block;
+      }
+
+      .collage-container {
+        position: relative;
+        width: 100%;
+        max-width: 1040px;
+        height: min(80vh, 720px);
+        margin: 0 auto;
+        padding: clamp(3rem, 5vw, 5rem) clamp(1rem, 3vw, 3rem);
+      }
+
+      .collage-item {
+        position: absolute;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .c-img-1 {
+        top: 10%;
+        left: 5%;
+        width: min(38vw, 400px);
+        padding: 10px 10px 30px 10px;
+        background: #fff;
+        transform: rotate(-3deg);
+      }
+
+      .c-envelope {
+        top: 40%;
+        left: 35%;
+        width: min(35vw, 350px);
+        z-index: 5;
+        box-shadow: none;
+      }
+
+      .c-card-red {
+        top: 15%;
+        right: 20%;
+        background: var(--clr-primary);
+        color: var(--clr-text-light);
+        padding: clamp(1.9rem, 4.4vw, 3rem) clamp(1.3rem, 2.2vw, 2rem);
+        width: min(40vw, 290px);
+        text-align: center;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        z-index: 2;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .c-img-2 {
+        bottom: 5%;
+        right: 5%;
+        width: min(26vw, 250px);
+        padding: 8px 8px 25px 8px;
+        background: #fff;
+        transform: rotate(4deg);
+        z-index: 1;
+      }
+
+      .c-monogram {
+        bottom: 20%;
+        left: 10%;
+        background: var(--clr-primary);
+        color: var(--clr-text-light);
+        padding: 1.6rem clamp(1.4rem, 2vw, 3rem);
+        transform: rotate(-5deg);
+        z-index: 6;
+      }
+
+      .divider {
+        width: 50px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.5);
+        margin: 1.2rem auto;
+      }
+
+      .flex-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: clamp(2rem, 5vw, 4rem);
+        width: 100%;
+        padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);
+      }
+
+      .flex-row.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .text-col {
+        flex: 1;
+      }
+
+      .text-col p {
+        max-width: 62ch;
+      }
+
+      .img-col {
+        flex: 1;
+        position: relative;
+      }
+
+      .flex-collage {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        min-height: clamp(360px, 40vw, 460px);
+      }
+
+      .taped-photo {
+        background: #fff;
+        padding: 10px 10px 35px 10px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        width: clamp(250px, 28vw, 320px);
+        height: clamp(300px, 32vw, 360px);
+        object-fit: cover;
+      }
+
+      .img-tilt-left {
+        transform: rotate(-6deg);
+        z-index: 2;
+        position: relative;
+      }
+
+      .img-tilt-right {
+        transform: rotate(5deg);
+        margin-left: clamp(-80px, -7vw, -100px);
+        z-index: 1;
+        position: relative;
+      }
+
+      .offset-down {
+        top: 50px;
+      }
+
+      .grid-3-col {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-top: 3rem;
+        text-align: center;
+        padding: 0 clamp(1.5rem, 4vw, 3rem);
+      }
+
+      .info-block {
+        border: 1px solid
+          color-mix(in srgb, var(--clr-accent) 45%, var(--clr-text-dark));
+        background: rgba(255, 255, 255, 0.38);
+        padding: clamp(1.3rem, 2vw, 2rem);
+      }
+
+      .travel-block {
+        margin-bottom: 2.2rem;
+      }
+
+      .travel-block h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .overlay-text {
+        position: absolute;
+        bottom: -40px;
+        left: -20px;
+        transform: rotate(-5deg);
+        z-index: 3;
+      }
+
+      .flower-icon {
+        --size: 2.8rem;
+        width: var(--size);
+        aspect-ratio: 1;
+        border: 2px solid currentColor;
+        border-radius: 50%;
+        display: inline-grid;
+        place-items: center;
+        opacity: 0.8;
+        position: relative;
+        margin-bottom: 1rem;
+      }
+
+      .flower-icon::before,
+      .flower-icon::after {
+        content: "";
+        position: absolute;
+        width: 66%;
+        height: 66%;
+        border: 2px solid currentColor;
+        border-radius: 999px;
+        opacity: 0.8;
+      }
+
+      .flower-icon::before {
+        transform: rotate(45deg);
+      }
+
+      .flower-icon::after {
+        transform: rotate(-45deg);
+      }
+
+      .flower-icon.lg {
+        --size: 3rem;
+      }
+
+      .flower-icon.large {
+        --size: 3.5rem;
+      }
+
+      .faq-col {
+        flex: 1.5;
+        padding: 0 clamp(1.5rem, 3vw, 3rem);
+      }
+
+      .faq-item {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid
+          color-mix(in srgb, var(--clr-accent) 45%, transparent);
+      }
+
+      .faq-trigger {
+        width: 100%;
+        background: transparent;
+        color: inherit;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        font-family: "Cardo", serif;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 0.4rem 0 0.9rem;
+        cursor: pointer;
+      }
+
+      .faq-trigger span {
+        font-size: 1.4rem;
+        line-height: 1;
+        transform: translateY(-2px);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+
+      .faq-answer p {
+        padding: 0 0 1rem;
+      }
+
+      .faq-item.is-open .faq-trigger span {
+        transform: rotate(45deg);
+      }
+
+      .faq-item.is-open .faq-answer {
+        max-height: 24rem;
+      }
+
+      .footer-text {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-weight: 600;
+      }
+
+      .body-text {
+        max-width: 62ch;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .bg-red .body-text {
+        color: rgba(255, 248, 245, 0.92);
+      }
+
+      .align-start {
+        align-items: flex-start;
+      }
+
+      .leading-tight {
+        line-height: 1.08;
+      }
+
+      .offset-flower {
+        margin-top: 1.2rem;
+      }
+
+      .tilt-slight {
+        transform: rotate(-2deg);
+      }
+
+      .sec-about.bg-beige {
+        padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 4vw, 3rem);
+      }
+
+      .sec-registry {
+        padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 4vw, 3rem);
+      }
+
+      .sec-faqs {
+        padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);
+      }
+
+      .sec-rsvp {
+        padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 4vw, 3rem);
+      }
+
+      .r-card-red {
+        top: 20%;
+        left: 10%;
+        background: var(--clr-primary);
+        color: var(--clr-text-light);
+        padding: clamp(1.6rem, 3.3vw, 3rem);
+        transform: rotate(-4deg);
+        z-index: 3;
+        border: 2px solid color-mix(in srgb, var(--clr-accent) 72%, white);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .r-envelope {
+        top: 40%;
+        left: 25%;
+        width: min(35vw, 350px);
+        box-shadow: none;
+        z-index: 2;
+      }
+
+      .r-img {
+        top: 10%;
+        right: 15%;
+        width: min(38vw, 400px);
+        padding: 10px 10px 30px 10px;
+        background: #fff;
+        z-index: 1;
+      }
+
+      .r-contact-card {
+        bottom: 5%;
+        right: 10%;
+        background: var(--clr-primary);
+        color: var(--clr-text-light);
+        padding: clamp(1.4rem, 2vw, 3rem) clamp(1.2rem, 2vw, 2rem);
+        width: min(40vw, 280px);
+        text-align: center;
+        border: 2px solid color-mix(in srgb, var(--clr-accent) 72%, white);
+        z-index: 4;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      .fade-in {
+        opacity: 0;
+      }
+
+      .reveal-image {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      }
+
+      .section-shell {
+        width: min(1160px, calc(100% - 3rem));
+        margin-inline: auto;
+      }
+
+      .sec-story {
+        padding: clamp(4rem, 8vw, 6rem) 0;
+      }
+
+      .story-layout {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: clamp(1.5rem, 4vw, 3.5rem);
+        align-items: center;
+      }
+
+      .story-note {
+        background: color-mix(in srgb, var(--clr-primary-light) 82%, white);
+        border: 1px solid
+          color-mix(in srgb, var(--clr-primary) 18%, var(--clr-accent));
+        padding: clamp(1.5rem, 4vw, 2.8rem);
+        box-shadow: 0 20px 45px
+          color-mix(in srgb, var(--clr-primary) 14%, transparent);
+        border-radius: var(--radius-card);
+      }
+
+      .story-note h2 {
+        margin: 0 0 1rem;
+      }
+
+      .story-note p {
+        margin-bottom: 1.2rem;
+      }
+
+      .story-photos {
+        position: relative;
+        min-height: clamp(320px, 42vw, 520px);
+      }
+
+      .story-photo {
+        position: absolute;
+        background: #fffdfb;
+        box-shadow: 0 16px 40px rgba(68, 28, 40, 0.18);
+        padding: 10px;
+        border-radius: var(--radius-frame);
+        overflow: hidden;
+      }
+
+      .story-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .story-photo.one {
+        width: min(44vw, 370px);
+        height: min(54vw, 420px);
+        top: 0;
+        left: 0;
+        transform: rotate(-3deg);
+      }
+
+      .story-photo.two {
+        width: min(30vw, 230px);
+        height: min(37vw, 290px);
+        right: 4%;
+        bottom: 8%;
+        transform: rotate(4deg);
+      }
+
+      .story-stamp {
+        position: absolute;
+        right: 12%;
+        top: 8%;
+        background: var(--clr-primary);
+        color: var(--clr-text-light);
+        border: 1px solid color-mix(in srgb, var(--clr-accent) 70%, white);
+        padding: 0.95rem 1.2rem;
+        letter-spacing: 1px;
+        transform: rotate(-8deg);
+        border-radius: 999px;
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-weight: 600;
+      }
+
+      .sec-itinerary-redesigned {
+        padding: clamp(4rem, 8vw, 6rem) 0;
+      }
+
+      .itinerary-layout {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: clamp(1.5rem, 4vw, 3.2rem);
+        align-items: start;
+      }
+
+      .itinerary-intro p {
+        max-width: 48ch;
+      }
+
+      .itinerary-track {
+        border-left: 1px solid color-mix(in srgb, var(--clr-accent) 52%, white);
+        padding-left: clamp(1rem, 2.6vw, 2rem);
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .itinerary-step {
+        background: color-mix(in srgb, var(--clr-primary) 10%, transparent);
+        border: 1px solid color-mix(in srgb, var(--clr-accent) 35%, white);
+        padding: 1.15rem 1.2rem;
+        border-radius: var(--radius-card);
+      }
+
+      .itinerary-step h3 {
+        margin: 0.15rem 0 0.55rem;
+        letter-spacing: 0.6px;
+      }
+
+      .time-pill {
+        display: inline-block;
+        margin: 0;
+        padding: 0.22rem 0.62rem;
+        border: 1px solid color-mix(in srgb, var(--clr-accent) 65%, white);
+        font-size: 0.84rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 999px;
+      }
+
+      .sec-madrid {
+        padding: clamp(4rem, 8vw, 6rem) 0;
+      }
+
+      .madrid-layout {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: clamp(1.5rem, 4vw, 3rem);
+        align-items: stretch;
+      }
+
+      .madrid-cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .madrid-card {
+        border: 1px solid
+          color-mix(in srgb, var(--clr-accent) 45%, var(--clr-primary));
+        background: color-mix(in srgb, var(--clr-primary-light) 75%, white);
+        padding: 1.1rem 1.1rem 1.2rem;
+        border-radius: var(--radius-card);
+      }
+
+      .madrid-card h3 {
+        margin: 0 0 0.5rem;
+      }
+
+      .madrid-card.wide {
+        grid-column: span 2;
+      }
+
+      .madrid-photo-wrap {
+        position: relative;
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(0.5rem, 2vw, 1.25rem);
+        overflow: visible;
+      }
+
+      .madrid-photo {
+        width: min(100%, 520px);
+        aspect-ratio: 4 / 5;
+        min-height: 360px;
+        background: #fffdf9;
+        padding: 12px;
+        box-shadow: 0 14px 30px rgba(82, 26, 45, 0.2);
+        border-radius: var(--radius-frame);
+        overflow: hidden;
+        margin-inline: auto;
+      }
+
+      .madrid-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .madrid-caption {
+        position: absolute;
+        left: 50%;
+        bottom: -18px;
+        transform: translateX(-50%);
+        background: var(--clr-accent);
+        color: var(--clr-text-dark);
+        padding: 0.75rem 1rem;
+        font-size: 0.86rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 999px;
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-weight: 600;
+      }
+
+      .sec-registry-modern {
+        padding: clamp(4rem, 8vw, 6rem) 0;
+      }
+
+      .registry-layout {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: clamp(1.5rem, 4vw, 3rem);
+        align-items: center;
+      }
+
+      .registry-copy p {
+        color: rgba(255, 248, 245, 0.92);
+      }
+
+      .registry-panel {
+        background: rgba(255, 248, 245, 0.18);
+        border: 1px solid var(--clr-accent);
+        padding: clamp(1.3rem, 3vw, 2rem);
+        backdrop-filter: blur(1px);
+        border-radius: var(--radius-card);
+      }
+
+      .registry-panel p {
+        margin: 0.45rem 0;
+      }
+
+      .sec-faq-modern {
+        padding: clamp(4rem, 8vw, 6rem) 0;
+      }
+
+      .faq-layout {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: clamp(1.3rem, 4vw, 2.8rem);
+        align-items: start;
+      }
+
+      .faq-kicker {
+        max-width: 28ch;
+      }
+
+      .sec-faq-modern .faq-item {
+        border-bottom: 1px solid
+          color-mix(in srgb, var(--clr-accent) 40%, var(--clr-primary));
+      }
+
+      .sec-faq-modern .faq-trigger {
+        color: var(--clr-text-dark);
+        padding: 0.8rem 0 1rem;
+      }
+
+      .sec-faq-modern .faq-answer p {
+        color: color-mix(in srgb, var(--clr-text-dark) 92%, var(--clr-primary));
+      }
+
+      .sec-rsvp-modern {
+        padding: clamp(4rem, 8vw, 6.5rem) 0;
+      }
+
+      .rsvp-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(1.5rem, 4vw, 3rem);
+        align-items: center;
+      }
+
+      .rsvp-collage-modern {
+        position: relative;
+        min-height: clamp(380px, 44vw, 500px);
+      }
+
+      .rsvp-piece {
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 18px 40px rgba(24, 8, 14, 0.26);
+        border-radius: var(--radius-frame);
+        overflow: hidden;
+      }
+
+      .rsvp-piece.photo {
+        width: min(42vw, 350px);
+        padding: 10px 10px 30px;
+        top: 0;
+        left: 8%;
+        transform: rotate(-4deg);
+      }
+
+      .rsvp-piece.photo img {
+        width: 100%;
+        height: auto;
+      }
+
+      .rsvp-piece.envelope {
+        width: min(34vw, 260px);
+        right: 4%;
+        bottom: 9%;
+        transform: rotate(5deg);
+        padding: 8px;
+      }
+
+      .rsvp-piece.envelope img {
+        width: 100%;
+        height: auto;
+      }
+
+      .rsvp-info {
+        border: 1px solid var(--clr-accent);
+        background: rgba(255, 248, 245, 0.13);
+        padding: clamp(1.4rem, 3.2vw, 2.2rem);
+        border-radius: var(--radius-card);
+      }
+
+      .rsvp-info p {
+        margin-bottom: 0.8rem;
+        color: rgba(255, 248, 245, 0.92);
+      }
+
+      .rsvp-info .divider {
+        margin-inline: 0;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem 1.2rem;
+      }
+
+      .label-small {
+        display: block;
+        margin-bottom: 0.2rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--clr-accent);
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-weight: 600;
+      }
+
+      @media (max-width: 900px) {
+        section {
+          min-height: auto;
+        }
+
+        .sec-hero {
+          min-height: auto;
+          padding: clamp(3rem, 9vw, 4.5rem) 1.2rem;
+        }
+
+        .hero-content h1 {
+          transform: none;
+        }
+
+        .flex-row,
+        .flex-row.reverse {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .text-col p {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .grid-3-col {
+          grid-template-columns: 1fr;
+          max-width: 520px;
+        }
+
+        .hero-center-block {
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .flex-collage {
+          min-height: auto;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.2rem;
+        }
+
+        .collage-container {
+          height: auto;
+          min-height: 640px;
+        }
+
+        .collage-item {
+          position: relative;
+          top: auto !important;
+          left: auto !important;
+          right: auto !important;
+          bottom: auto !important;
+          margin: 1.35rem auto;
+          transform: none !important;
+          width: min(89vw, 430px) !important;
+        }
+
+        .c-card-red,
+        .r-card-red,
+        .r-contact-card {
+          width: min(89vw, 430px) !important;
+        }
+
+        .img-tilt-right {
+          margin-left: 0;
+        }
+
+        .taped-photo {
+          width: min(88vw, 420px);
+          height: auto;
+          aspect-ratio: 4 / 5;
+        }
+
+        .offset-down {
+          top: 0;
+        }
+
+        .overlay-text {
+          position: static;
+          transform: none;
+          margin-top: 1rem;
+        }
+
+        .offset-flower {
+          transform: none;
+          margin-top: 1rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .collage-container {
+          min-height: 0;
+          padding-top: 1.8rem;
+          padding-bottom: 1.8rem;
+        }
+
+        .script-title.monogram-text {
+          font-size: clamp(3.1rem, 16vw, 4.2rem);
+        }
+
+        .r-contact-card p {
+          font-size: 0.95rem;
+        }
+      }
+
+      @media (max-width: 960px) {
+        .story-layout,
+        .itinerary-layout,
+        .madrid-layout,
+        .registry-layout,
+        .faq-layout,
+        .rsvp-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .story-photos,
+        .rsvp-collage-modern {
+          min-height: 340px;
+        }
+
+        .madrid-cards {
+          grid-template-columns: 1fr;
+        }
+
+        .madrid-card.wide {
+          grid-column: auto;
+        }
+
+        .itinerary-track {
+          border-left: none;
+          border-top: 1px solid color-mix(in srgb, var(--clr-accent) 55%, white);
+          padding-left: 0;
+          padding-top: 1rem;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .madrid-photo-wrap {
+          padding-inline: 0;
+        }
+
+        .madrid-caption {
+          bottom: -14px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .section-shell {
+          width: min(1160px, calc(100% - 1.5rem));
+        }
+
+        .story-photo {
+          position: relative;
+          inset: auto;
+          transform: none !important;
+          width: 100% !important;
+          height: auto !important;
+          margin-bottom: 0.9rem;
+        }
+
+        .story-stamp {
+          position: relative;
+          right: auto;
+          top: auto;
+          display: inline-block;
+          margin-top: 0.4rem;
+          transform: rotate(0);
+        }
+
+        .rsvp-piece {
+          position: relative;
+          inset: auto;
+          transform: none !important;
+          width: 100% !important;
+          margin-bottom: 0.8rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .fade-up,
+        .fade-in {
+          opacity: 1;
+          transform: none;
+        }
+
+        .reveal-image {
+          clip-path: none;
+        }
+
+        .faq-answer {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="texture-overlay"></div>
+
+    <main class="smooth-scroll-wrapper">
+      <section class="sec-hero bg-red">
+        <div class="hero-content">
+          <p class="overline fade-up">A SPECIAL NOTE FROM</p>
+          <h1 class="script-title fade-up">
+            <span data-edit="text" data-id="couple-names-hero"
+              >Luis and Bianca</span
+            >
+          </h1>
+
+          <div class="hero-center-block">
+            <a href="#itinerary" class="nav-link fade-in">ITINERARY</a>
+            <div class="hero-image-wrapper reveal-image fade-up">
+              <img
+                src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80"
+                alt="Luis and Bianca"
+                class="polaroid"
+                width="320"
+                height="420"
+              />
+            </div>
+            <a href="#details" class="nav-link fade-in">DETAILS</a>
+          </div>
+
+          <p class="footer-text fade-up">
+            WE ARE FINALLY GETTING MARRIED ...
+            <i data-edit="text" data-id="wedding-location">IN MADRID!</i>
+          </p>
+        </div>
+      </section>
+
+      <section class="sec-story bg-beige" id="details">
+        <div class="section-shell story-layout">
+          <article class="story-note fade-up">
+            <p class="overline">FROM MADRID, WITH LOVE</p>
+            <h2 class="script-title xl">Our Story, Woven Into This Weekend</h2>
+            <p class="body-text">
+              We are gathering in Madrid for a celebration that feels intimate,
+              warm, and deeply personal. Think old-city charm, candlelit dinner,
+              and one beautiful day shared with the people we love most.
+            </p>
+            <p class="body-text">
+              Below you will find the key details for the weekend, including the
+              ceremony timing, travel pointers, and RSVP notes.
+            </p>
+          </article>
+          <div class="story-photos">
+            <figure class="story-photo one reveal-image" data-speed="0.04">
+              <img
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"
+                alt="Luis and Bianca portrait"
+                width="800"
+                height="1000"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="story-photo two reveal-image" data-speed="-0.03">
+              <img
+                src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=700&q=80"
+                alt="Madrid city scenery"
+                width="500"
+                height="670"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <div
+              class="story-stamp fade-in"
+              data-edit="text"
+              data-id="initials-monogram"
+            >
+              LB IN MADRID
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-itinerary-redesigned bg-red" id="itinerary">
+        <div class="section-shell itinerary-layout">
+          <article class="itinerary-intro fade-up">
+            <p class="overline">WEDDING DAY FLOW</p>
+            <h2 class="script-title xl">A Day Designed to Feel Easy</h2>
+            <p>
+              We kept the schedule thoughtful so everyone can enjoy each moment
+              without rushing. Save these key timings and location details.
+            </p>
+          </article>
+          <div class="itinerary-track">
+            <article class="itinerary-step fade-up">
+              <p class="time-pill" data-edit="text" data-id="wedding-date-card">
+                December 7, 2030
+              </p>
+              <h3>Welcome Gathering</h3>
+              <p>
+                Light refreshments and welcome drinks before the ceremony,
+                overlooking the garden grounds.
+              </p>
+            </article>
+            <article class="itinerary-step fade-up">
+              <p
+                class="time-pill"
+                data-edit="text"
+                data-id="ceremony-time-card"
+              >
+                4:00 PM Till Late
+              </p>
+              <h3>Main Ceremony</h3>
+              <p data-edit="text" data-id="venue-address-card">
+                123 Calle Dondequeria, 28015 Madrid, Spain
+              </p>
+            </article>
+            <article class="itinerary-step fade-up">
+              <p class="time-pill">After Ceremony</p>
+              <h3>Dinner and Celebration</h3>
+              <p>
+                Tapas-style dinner, live music, and dancing through the evening
+                with the city lights around us.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-madrid bg-beige">
+        <div class="section-shell madrid-layout">
+          <div class="madrid-cards">
+            <article class="madrid-card fade-up">
+              <h3 class="script-title md">Flights</h3>
+              <p>
+                Please arrange your own airfare. We suggest arriving by December
+                5 for a comfortable lead-in before the celebrations.
+              </p>
+            </article>
+            <article class="madrid-card fade-up">
+              <h3 class="script-title md">Stay</h3>
+              <p>
+                Room blocks are reserved at Hotel Maravillosa. Nearby areas like
+                Retiro and central Madrid are also convenient options.
+              </p>
+            </article>
+            <article class="madrid-card wide fade-up">
+              <h3 class="script-title md">Weekend Plan</h3>
+              <p>
+                Confirmed guests will receive a detailed itinerary including a
+                welcome dinner, optional city walk, and transportation notes.
+              </p>
+            </article>
+          </div>
+          <div class="madrid-photo-wrap fade-up">
+            <div class="madrid-photo reveal-image">
+              <img
+                src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1100&q=80"
+                alt="Madrid venue inspiration"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="madrid-caption">Travel details curated for guests</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-registry-modern bg-red">
+        <div class="section-shell registry-layout">
+          <article class="registry-copy fade-up">
+            <h2 class="script-title xl">Your Presence Is Our Favorite Gift</h2>
+            <p>
+              Celebrating together in Madrid is already more than we could ask
+              for. If you would still like to gift, we created a simple registry
+              option for convenience.
+            </p>
+          </article>
+          <aside class="registry-panel fade-up">
+            <p><strong>Registry:</strong> Sining Spaces</p>
+            <p><strong>Reference:</strong> No. 12345</p>
+            <p><strong>Email:</strong> hello@reallygreatsite.com</p>
+            <div class="divider"></div>
+            <p>
+              You may also request future-fund details by email if that feels
+              more meaningful to you.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="sec-faq-modern bg-beige">
+        <div class="section-shell faq-layout">
+          <article class="faq-kicker fade-up">
+            <p class="overline">PLANNING SUPPORT</p>
+            <h2 class="script-title xl leading-tight">
+              Frequently Asked Questions
+            </h2>
+          </article>
+          <div class="faq-col">
+            <article class="faq-item fade-up is-open">
+              <button class="faq-trigger" type="button" aria-expanded="true">
+                Do I need a visa to travel to Spain?
+                <span aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. Philippine passport holders generally need a Schengen
+                  visa. We recommend applying at least 3 months in advance.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item fade-up">
+              <button class="faq-trigger" type="button" aria-expanded="false">
+                Can I bring a plus one?
+                <span aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  This is a small destination celebration, so seating is limited
+                  to guests listed on the invitation.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item fade-up">
+              <button class="faq-trigger" type="button" aria-expanded="false">
+                Will transportation be provided?
+                <span aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. Shuttle service will be arranged to and from the venue
+                  for guests staying at our partner hotel.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-rsvp-modern bg-red">
+        <div class="section-shell rsvp-layout">
+          <div class="rsvp-collage-modern fade-up">
+            <figure class="rsvp-piece photo reveal-image" data-speed="0.04">
+              <img
+                src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1100&q=80"
+                alt="Couple portrait"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="rsvp-piece envelope reveal-image" data-speed="-0.03">
+              <img
+                src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=800&q=80"
+                alt="Invitation envelope"
+                width="600"
+                height="430"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+          <article class="rsvp-info fade-up">
+            <h2 class="script-title lg">RSVP by October 15, 2030</h2>
+            <p>
+              Please confirm attendance early so we can finalize transportation,
+              seating, and guest welcome arrangements.
+            </p>
+            <div class="divider"></div>
+            <div class="contact-grid">
+              <div>
+                <span class="label-small">Mobile Number</span>
+                <p>(123) 456-7890</p>
+              </div>
+              <div>
+                <span class="label-small">Email Address</span>
+                <p>hello@reallygreatsite.com</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      const hasGsap = typeof window.gsap !== "undefined";
+      const hasScrollTrigger = typeof window.ScrollTrigger !== "undefined";
+      const hasLenis = typeof window.Lenis !== "undefined";
+
+      if (!prefersReducedMotion && hasGsap && hasScrollTrigger && hasLenis) {
+        const lenis = new Lenis({
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          direction: "vertical",
+          gestureDirection: "vertical",
+          smooth: true,
+          mouseMultiplier: 1,
+          smoothTouch: false,
+          touchMultiplier: 2,
+          infinite: false,
+        });
+
+        lenis.on("scroll", ScrollTrigger.update);
+
+        gsap.ticker.add((time) => {
+          lenis.raf(time * 1000);
+        });
+
+        gsap.ticker.lagSmoothing(0);
+      }
+
+      if (hasGsap && hasScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        if (prefersReducedMotion || !hasGsap) {
+          document.querySelectorAll(".fade-up, .fade-in").forEach((el) => {
+            el.style.opacity = "1";
+            el.style.transform = "none";
+          });
+          document
+            .querySelectorAll(".reveal-image")
+            .forEach((el) => (el.style.clipPath = "none"));
+          return;
+        }
+
+        const heroTimeline = gsap.timeline({
+          defaults: { ease: "power3.out" },
+        });
+
+        heroTimeline
+          .from(".sec-hero .overline", {
+            y: 18,
+            opacity: 0,
+            duration: 0.65,
+          })
+          .from(
+            ".sec-hero h1",
+            {
+              y: 28,
+              opacity: 0,
+              duration: 0.9,
+            },
+            0.08,
+          )
+          .from(
+            ".sec-hero .hero-image-wrapper",
+            {
+              y: 24,
+              opacity: 0,
+              scale: 0.96,
+              duration: 0.85,
+            },
+            0.16,
+          )
+          .from(
+            ".sec-hero .nav-link",
+            {
+              y: 14,
+              opacity: 0,
+              duration: 0.55,
+              stagger: 0.12,
+            },
+            0.24,
+          )
+          .from(
+            ".sec-hero .footer-text",
+            {
+              y: 16,
+              opacity: 0,
+              duration: 0.7,
+            },
+            0.32,
+          );
+
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item, index) => {
+          const trigger = item.querySelector(".faq-trigger");
+          const answer = item.querySelector(".faq-answer");
+
+          if (item.classList.contains("is-open")) {
+            answer.style.maxHeight = `${answer.scrollHeight}px`;
+          }
+
+          trigger.addEventListener("click", () => {
+            const isOpen = item.classList.contains("is-open");
+
+            faqItems.forEach((otherItem) => {
+              otherItem.classList.remove("is-open");
+              const otherTrigger = otherItem.querySelector(".faq-trigger");
+              const otherAnswer = otherItem.querySelector(".faq-answer");
+              otherTrigger.setAttribute("aria-expanded", "false");
+              otherAnswer.style.maxHeight = "0px";
+            });
+
+            if (!isOpen) {
+              item.classList.add("is-open");
+              trigger.setAttribute("aria-expanded", "true");
+              answer.style.maxHeight = `${answer.scrollHeight}px`;
+            }
+          });
+
+          trigger.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowDown") {
+              event.preventDefault();
+              const next =
+                faqItems[(index + 1) % faqItems.length].querySelector(
+                  ".faq-trigger",
+                );
+              next.focus();
+            }
+
+            if (event.key === "ArrowUp") {
+              event.preventDefault();
+              const prev =
+                faqItems[
+                  (index - 1 + faqItems.length) % faqItems.length
+                ].querySelector(".faq-trigger");
+              prev.focus();
+            }
+          });
+        });
+
+        const fadeUpElements = gsap.utils.toArray(".fade-up");
+        fadeUpElements.forEach((elem) => {
+          gsap.to(elem, {
+            scrollTrigger: {
+              trigger: elem,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+            y: 0,
+            opacity: 1,
+            duration: 0.95,
+            ease: "power3.out",
+          });
+        });
+
+        const revealImages = gsap.utils.toArray(".reveal-image");
+        revealImages.forEach((img) => {
+          gsap.to(img, {
+            scrollTrigger: {
+              trigger: img,
+              start: "top 80%",
+            },
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            duration: 1.35,
+            ease: "power4.inOut",
+          });
+        });
+
+        gsap.to(".fade-in", {
+          opacity: 1,
+          duration: 1.2,
+          delay: 0.35,
+          stagger: 0.2,
+          ease: "power2.out",
+        });
+
+        const parallaxItems = gsap.utils.toArray("[data-speed]");
+        parallaxItems.forEach((item) => {
+          const speed = parseFloat(item.getAttribute("data-speed"));
+
+          gsap.to(item, {
+            y: () => ScrollTrigger.maxScroll(window) * speed,
+            ease: "none",
+            scrollTrigger: {
+              trigger: item.closest("section"),
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1,
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

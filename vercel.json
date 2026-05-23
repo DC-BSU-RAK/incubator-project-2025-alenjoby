@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "name": "invio-frontend",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/admin", "destination": "/pages/admin/index.html" },
+    { "source": "/admin/", "destination": "/pages/admin/index.html" },
+    {
+      "source": "/api/(.*)",
+      "destination": "https://invio-backend-znac.onrender.com/api/$1"
+    },
+    { "source": "/invite", "destination": "/invite.html" },
+    { "source": "/templates", "destination": "/templates.html" },
+    { "source": "/dashboard", "destination": "/pages/dashboard/index.html" },
+    {
+      "source": "/checkout/index",
+      "destination": "/pages/checkout/index.html"
+    },
+    { "source": "/checkout/(.*)", "destination": "/pages/checkout/index.html" },
+    { "source": "/checkout", "destination": "/pages/checkout/index.html" },
+    { "source": "/studio", "destination": "/pages/studio/index.html" },
+    {
+      "source": "/studio/(.*)",
+      "destination": "/pages/studio/index.html"
+    },
+    { "source": "/auth", "destination": "/pages/auth/index.html" },
+    {
+      "source": "/:slug([a-z0-9][a-z0-9-]*)",
+      "destination": "/invite.html?slug=:slug"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
+}

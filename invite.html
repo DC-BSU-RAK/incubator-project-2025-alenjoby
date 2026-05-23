@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INVIO | Invitation</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+    <meta name="description" content="You have been invited." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #030712;
+      }
+      
+      #inviteFrame {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.8s ease;
+        background: white;
+      }
+
+      /* Loader styles */
+      #loader {
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(circle at center, #111827, #030712);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+      }
+
+      #loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .brand {
+        font-family: 'Manrope', sans-serif;
+        color: white;
+        font-size: 1.5rem;
+        letter-spacing: 0.3em;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        animation: pulse 2s infinite ease-in-out;
+      }
+
+      .spinner {
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 2px solid rgba(245, 158, 11, 0.2);
+        border-right-color: #f59e0b;
+        animation: spin 1s infinite linear;
+      }
+
+      /* Error screen */
+      #errorScreen {
+        position: fixed;
+        inset: 0;
+        background: #030712;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        font-family: 'Manrope', sans-serif;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      #errorScreen.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      #errorScreen h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.5rem;
+        color: #fca5a5;
+        margin-bottom: 0.5rem;
+      }
+
+      #errorScreen p {
+        color: #94a3b8;
+      }
+
+      @keyframes spin {
+        100% { transform: rotate(1turn); }
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+
+      /* Logo Animation */
+      .logo-animate {
+        height: 5rem;
+        width: auto;
+        opacity: 0;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+        transform: translateX(-15px);
+        animation: logoTyping 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        will-change: transform, opacity, clip-path;
+      }
+      @media (max-width: 768px) {
+        .logo-animate {
+          height: 4rem;
+        }
+      }
+
+      @keyframes logoTyping {
+        0% {
+          opacity: 0;
+          clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+          transform: translateX(-15px);
+        }
+        20% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          transform: translateX(0);
+        }
+      }
+    </style>
+    
+    <script src="/js/templates.js" defer></script>
+    <script type="module" src="/js/invite.js"></script>
+    
+  </head>
+  <body>
+    <iframe id="inviteFrame" title="Invitation"></iframe>
+
+    <div id="loader">
+      <div class="brand">
+        <img src="/assets/images/logo.svg" alt="INVIO logo" class="logo-animate" />
+      </div>
+      <div class="spinner"></div>
+    </div>
+
+    <div id="errorScreen">
+      <h2 id="errorTitle">Invitation Not Found</h2>
+      <p id="errorText">The link might be invalid or the invitation was removed.</p>
+    </div>
+  </body>
+</html>

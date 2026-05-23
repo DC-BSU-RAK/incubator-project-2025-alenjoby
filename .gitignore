@@ -1,0 +1,58 @@
+# Dependency directories
+node_modules/
+server/node_modules/
+
+# Environment variables (Sensitive data)
+.env
+server/.env
+
+# Documentation (User requested to exclude all .md files)
+*.md
+**/*.md
+!README.md
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+.cache/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific ignores
+
+# Graphify outputs
+graphify-out/
+.graphify_*.json
+.graphify_python
+.gemini/
+.antigravity/
+.antigravityignore
+.venv
+.invio-vault/
+
+# Hyperframes & Promo Video renders
+promo-video/.waveform-cache/
+promo-video/renders/
+promo-video/hyperframes.json
+promo-video/meta.json
+promo-video/*.bak
+promo-video/
